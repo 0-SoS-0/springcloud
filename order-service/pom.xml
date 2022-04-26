@@ -26,19 +26,33 @@
             <artifactId>mybatis-spring-boot-starter</artifactId>
         </dependency>
 
-       <!--
-       &lt;!&ndash;eureka注册中心&ndash;&gt;
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
-            <version>3.1.1</version>
-        </dependency>-->
+        <!--
+        &lt;!&ndash;eureka注册中心&ndash;&gt;
+         <dependency>
+             <groupId>org.springframework.cloud</groupId>
+             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+             <version>3.1.1</version>
+         </dependency>-->
 
         <!--nacos客户端依赖包-->
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
             <version>2021.0.1.0</version>
+        </dependency>
+
+        <!--        nacos配置管理依赖-->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
+            <version>2021.0.1.0</version>
+        </dependency>
+
+        <!--springboot 2.4+ 以后需要配置才会优先加载bootstrap.yml文件-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-bootstrap</artifactId>
+            <version>3.1.1</version>
         </dependency>
     </dependencies>
     <build>

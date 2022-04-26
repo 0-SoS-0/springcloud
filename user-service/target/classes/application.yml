@@ -6,14 +6,7 @@ spring:
     username: root
     password: wt2109
     driver-class-name: com.mysql.cj.jdbc.Driver
-  application:
-    name: userserver    #user 服务注册到注册中心的名字
-  cloud:
-    nacos:
-      server-addr: http://192.168.204.129:8848
-      discovery:
-        cluster-name: SZ  #配置集群名称，也就是机房位置（服务分级），服务请求优先调用本地服务，本地服务不存在可以调用集群其他服务
-        namespace: wangtao   #环境隔离，不同环境下的服务不能相互调用
+
 
 mybatis:
   type-aliases-package: cn.itcast.user.pojo
