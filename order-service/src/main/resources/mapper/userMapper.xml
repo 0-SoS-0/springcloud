@@ -1,0 +1,11 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.itcast.order.mapper.OrderMapper">
+
+    <select id="findById" resultType="cn.itcast.order.pojo.Order">
+        select *
+        from tb_order
+        where id = #{orderId}
+    </select>
+</mapper>

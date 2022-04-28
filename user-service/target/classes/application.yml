@@ -19,7 +19,8 @@ logging:
     root: info
     cn.itcast: debug
   pattern:
-    dateformat: yyyy-MM-dd HH:mm:ss:SSS
+    dateformat: yyyy-MM-dd HH:mm:ss
+
 #eureka:
 #  client:
 #    service-url:

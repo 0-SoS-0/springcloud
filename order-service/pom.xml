@@ -54,6 +54,31 @@
             <artifactId>spring-cloud-starter-bootstrap</artifactId>
             <version>3.1.1</version>
         </dependency>
+
+        <!--引入依赖  声明式的HTTP客户端 feign-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
+            <version>3.1.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-loadbalancer</artifactId>
+            <version>3.1.1</version>
+        </dependency>
+
+        <!--feign性能优化，默认使用的是URLConnection 没有连接池-->
+        <dependency>
+            <groupId>io.github.openfeign</groupId>
+            <artifactId>feign-httpclient</artifactId>
+            <version>11.8</version>
+        </dependency>
+        <dependency>
+            <groupId>com.example</groupId>
+            <artifactId>feign-api</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
     </dependencies>
     <build>
         <plugins>

@@ -18,9 +18,9 @@ public class RestTemplateConfig {
      *
      * @return
      */
-    @Bean
+/*    @Bean
     @LoadBalanced   //服务服务负载均衡（集群模式下）
     public RestTemplate restTemplate() {
         return new RestTemplate();
-    }
+    }*/
 }

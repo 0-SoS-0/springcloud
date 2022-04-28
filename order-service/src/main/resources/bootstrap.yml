@@ -11,6 +11,8 @@ spring:
       server-addr: http://192.168.204.129:8848    #注册中心
       config:
         file-extension: yaml        #文件后缀名
+        shared-configs: # 多微服务间共享的配置列表
+          - dataId: common.yaml   # 要共享的配置文件id
       discovery:
         cluster-name: SZ  #配置集群名称，也就是机房位置（服务分级），服务请求优先调用本地服务，本地服务不存在可以调用集群其他服务
         namespace: wangtao   #环境隔离，不同环境下的服务不能相互调用

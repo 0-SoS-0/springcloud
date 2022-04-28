@@ -1,5 +1,6 @@
 package cn.itcast.order.web;
 
+import cn.itcast.order.config.PatternProperties;
 import cn.itcast.order.pojo.Order;
 import cn.itcast.order.service.OrderService;
 import com.alibaba.nacos.api.config.annotation.NacosValue;
@@ -24,8 +25,8 @@ public class OrderController {
     @Autowired
     private OrderService orderService;
 
-    @Value("${pattern.dateformat}")
-    private String dateFormat;
+    @Autowired
+    private PatternProperties patternProperties;
 
     @GetMapping("{orderId}")
     public Order queryOrderByUserId(@PathVariable("orderId") Long orderId) {
@@ -35,7 +36,7 @@ public class OrderController {
 
     @GetMapping("/now")
     public String getNow() {
-        String nowTimeString = LocalDateTime.now().format(DateTimeFormatter.ofPattern(dateFormat));
+        String nowTimeString = LocalDateTime.now().format(DateTimeFormatter.ofPattern(patternProperties.getDateformat()));
 
         logger.info("当前日期 {}", nowTimeString);
         return nowTimeString;

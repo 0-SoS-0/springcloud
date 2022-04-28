@@ -47,10 +47,23 @@
             <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
             <version>2021.0.1.0</version>
         </dependency>
-
+        <!--spring boot 2.4以后需要加上该依赖才会优先加载bootstrap文件-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-bootstrap</artifactId>
+            <version>3.1.1</version>
+        </dependency>
+
+        <!--引入依赖  声明式的HTTP客户端-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
+            <version>3.1.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-loadbalancer</artifactId>
             <version>3.1.1</version>
         </dependency>
     </dependencies>
