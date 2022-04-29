@@ -31,7 +31,10 @@ public class UserController {
      * @return 用户
      */
     @GetMapping("/{id}")
-    public User queryById(@PathVariable("id") Long id) {
+    public User queryById(@PathVariable("id") Long id,
+                          @RequestHeader(value = "Truth", required = false) String truth   //验证gateway的过滤器配置
+    ) {
+        logger.info("请求头参数： {}", truth);
         return userService.queryById(id);
     }
 
@@ -39,7 +42,7 @@ public class UserController {
     public String getTimeNow() {
         String nowTimeString = LocalDateTime.now().format(DateTimeFormatter.ofPattern(patternProperties.getDateformat()));
 
-        logger.info("当前日期 {}——{}", nowTimeString,patternProperties.getCommon());
+        logger.info("当前日期 {}——{}", nowTimeString, patternProperties.getCommon());
         return nowTimeString;
     }
 }

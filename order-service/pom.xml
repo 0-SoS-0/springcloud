@@ -62,6 +62,7 @@
             <version>3.1.1</version>
         </dependency>
 
+        <!--使用nacos + ribbon做负载均衡时添加的loadbalancer依赖-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-loadbalancer</artifactId>

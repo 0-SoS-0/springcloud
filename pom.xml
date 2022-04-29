@@ -25,7 +25,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
-        <springversion>2021.0.1</springversion>
+        <springversion>2021.0.1.0</springversion>
         <mysql.version>8.0.28</mysql.version>
         <mybatis.version>2.2.2</mybatis.version>
     </properties>
